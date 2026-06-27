@@ -6,7 +6,7 @@
   "parent_uuid": "",
   "date": 1669974415,
   "creator": "sunaku",
-  "title": "Enthium layout for Glorious Engrammer keymap",
+  "title": "Promethium layout for Glorious Engrammer keymap",
   "notes": "",
   "tags": [
 
@@ -17,7 +17,7 @@
 
   ],
   "layer_names": [
-    "Enthium",
+    "Promethium",
     "Lower",
     "Magic"
   ],
@@ -269,106 +269,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PG_DN",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "B",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftRing2 (Y, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "O",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "U",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "FSLH",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "X",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "L",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "D",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightRing2 (W, LAYER_Enthium)",
+            "value": "TAB",
             "params": [
 
             ]
@@ -390,7 +291,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "DOWN",
+            "value": "W",
             "params": [
 
             ]
@@ -401,117 +302,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "Q",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftPinky (C, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftRing1 (I, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftMiddy (E, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftIndex (A, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&plain LAYER_Typing COMMA",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&plain LAYER_Typing K",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightIndex (H, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightMiddy (T, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightRing1 (N, LAYER_Enthium)",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightPinky (S, LAYER_Enthium)",
+            "value": "G",
             "params": [
 
             ]
@@ -522,18 +313,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "Z",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&sticky_key_modtap LSFT LSFT",
+            "value": "M",
             "params": [
 
             ]
@@ -544,7 +324,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SQT",
+            "value": "X",
             "params": [
 
             ]
@@ -566,17 +346,6 @@
         "value": "&kp",
         "params": [
           {
-            "value": "EQUAL",
-            "params": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "DOT",
             "params": [
 
@@ -588,7 +357,214 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SEMI",
+            "value": "SQT",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "EQUAL",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "FSLH",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RCTRL",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "Z",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&LeftPinky (S, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&LeftRing1 (N, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&LeftMiddy (T, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&LeftIndex (H, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "K",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "COMMA",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightIndex (A, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightMiddy (E, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightRing1 (I, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightPinky (C, LAYER_Promethium)"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "Q",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "BSLH",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "F",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "P",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "D",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "L",
+            "params": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "J",
             "params": [
 
             ]
@@ -646,10 +622,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "ENTER",
             "params": [
 
             ]
@@ -660,7 +636,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "J",
+            "value": "SEMI",
             "params": [
 
             ]
@@ -671,7 +647,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "M",
+            "value": "U",
             "params": [
 
             ]
@@ -682,7 +658,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "G",
+            "value": "O",
             "params": [
 
             ]
@@ -693,7 +669,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "P",
+            "value": "Y",
             "params": [
 
             ]
@@ -704,7 +680,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "F",
+            "value": "B",
             "params": [
 
             ]
@@ -712,10 +688,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&sticky_key_modtap RSFT RSFT",
+            "value": "ENTER",
             "params": [
 
             ]
@@ -829,10 +805,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&crumb LAYER_World LT",
+            "value": "RSFT",
             "params": [
 
             ]

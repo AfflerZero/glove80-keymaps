@@ -30,27 +30,26 @@ end
 task :dtsi => dtsi_files
 
 rule '.dtsi' => '.dtsi.erb' do |t|
-  input = File.read(t.source)
-    # NOTE: this may shift line numbers, hence dump *.tmp below
-    .gsub(/\n(?= *<%(?!=))/, '') # remove leading newline
+  # NOTE: this may shift line numbers, hence dump *.tmp below
+  input = File.read(t.source).gsub(/\n(?= *<%(?!=))/, '') # remove leading newline
 
   template = ERB.new(input, trim_mode: '<>')
   template.filename = t.source + '.tmp'
   File.write(template.filename, input) # for error line numbers
 
   output = template.result()
-    .gsub(/ +$/, '') # remove trailing spaces
-    .gsub(/\n+(?= +#(?!define))/, "\n") # tighten #elif
+                   .gsub(/ +$/, '') # remove trailing spaces
+                   .gsub(/\n+(?= +#(?!define))/, "\n") # tighten #elif
   File.write(t.name, output)
 end
 
 rule '.dtsi.min' => '.dtsi' do |t|
   minified = File.read(t.source)
-    .gsub(%r{^\s*//(?! ==== ).*}, '') # remove comment lines
-    .gsub(%r{(?<=[^\*])//.*}, '') # remove trailing comments
-    .gsub(/^\s+/, '') # remove indentation
-    .squeeze("\n") # remove blank lines
-    .squeeze(' ') # remove extra spaces
+                 .gsub(%r{^\s*//(?! ==== ).*}, '') # remove comment lines
+                 .gsub(%r{(?<=[^\*])//.*}, '') # remove trailing comments
+                 .gsub(/^\s+/, '') # remove indentation
+                 .squeeze("\n") # remove blank lines
+                 .squeeze(' ') # remove extra spaces
   File.write(t.name, minified)
 end
 
@@ -96,13 +95,8 @@ task :pdf => layers_pdf
 layers_pdf_sequence = %w[
   base-layer-diagram
   base-layer-diagram-Enthium
-  base-layer-diagram-Dvorak
-  base-layer-diagram-Colemak
-  base-layer-diagram-QWERTY
 
   repeat-layer-diagram
-  typing-layer-diagram
-  gaming-layer-diagram
 
   cursor-layer-diagram
   number-layer-diagram
@@ -110,14 +104,11 @@ layers_pdf_sequence = %w[
 
   symbol-layer-diagram
   mouse-layer-diagram
-  system-layer-diagram
 
   emoji-layer-diagram
-  world-layer-diagram
 
   lower-layer-diagram
   magic-layer-diagram
-  factory-layer-diagram
 ]
 
 layer_pngs = Dir["README/{#{layers_pdf_sequence.join(",")}}.png"]

@@ -1,16 +1,9 @@
 # Glorious Engrammer v52 🧑‍🚀🚀✨ keymap for Glove80
 
-This is [my Glove80] keymap featuring the [Enthium] layout with [Miryoku]-style
-layers and [home row mods].  Other layouts (**QWERTY**, Dvorak, and Colemak)
-as well as traditional pinky shifts are also provided to ease your transition.
+This is [my Glove80](https://sunaku.github.io/moergo-glove80-keyboard.html) keymap featuring a custom Promethium base layout with [Miryoku](https://github.com/manna-harbour/miryoku)-style
+layers and [home row mods](https://sunaku.github.io/home-row-mods.html).  This version trims transition layouts/layers and keeps home-row shift behavior.
 
-![Photograph of my Glove80 with Enthium layout and per-key RGB illumination.](
-README/base-layer-photograph-Enthium.webp )
-
-[my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
-[Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html
-[Miryoku]:       https://github.com/manna-harbour/miryoku
-[home row mods]: https://sunaku.github.io/home-row-mods.html
+![Photograph of my Glove80 with Enthium layout and per-key RGB illumination.](README/base-layer-photograph-Enthium.webp)
 
 ## Keymap
 
@@ -28,64 +21,65 @@ For your reference, here are my personal customizations on top of the defaults:
 
 ### Legend
 
-See [interactive layer map][map] for overview and documentation.
->NOTE: This is also available as a [printable PDF document][pdf].
+See [interactive layer map](https://sunaku.github.io/moergo-glove80-keyboard.html#layers) for overview and documentation.
 
-See [release notes][rel] for a visual overview of recent updates.
+> NOTE: This is also available as a [printable PDF document](README/all-layer-diagrams.pdf).
 
-[map]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
-[pdf]: README/all-layer-diagrams.pdf
-[rel]: https://github.com/sunaku/glove80-keymaps/releases
+See [release notes](https://github.com/sunaku/glove80-keymaps/releases) for a visual overview of recent updates.
 
 ### Community
 
-Join the [`#glorious-engrammer`][ch] channel on [MoErgo's discord][sv].
-
-[ch]: https://discord.com/channels/877392805654306816/1111469812850380831
-[sv]: https://www.moergo.com/discord
+Join the [`#glorious-engrammer`](https://discord.com/channels/877392805654306816/1111469812850380831) channel on [MoErgo's discord](https://www.moergo.com/discord).
 
 ### Documentation
 
->TIP: You can "talk" to this codebase here:
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/sunaku/glove80-keymaps)
+> TIP: You can "talk" to this codebase here:
+> [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/sunaku/glove80-keymaps)
 
 <!-- vim-markdown-toc GFM -->
 
 * [Guide](#guide)
-    * [Factory layout](#factory-layout)
-    * [Operating system](#operating-system)
-    * [Home row mods](#home-row-mods)
-        * [Difficulty level](#difficulty-level)
-        * [One-shot shifts](#one-shot-shifts)
-        * [Shift forgiveness](#shift-forgiveness)
-        * [Bilateral combinations](#bilateral-combinations)
-            * [One-handed shortcuts](#one-handed-shortcuts)
-    * [Layer access keys](#layer-access-keys)
-    * [Key auto-repeat](#key-auto-repeat)
-    * [Alpha layouts](#alpha-layouts)
-    * [Unicode and Emoji](#unicode-and-emoji)
-        * [OS-native compose](#os-native-compose)
+   * [Factory layout](#factory-layout)
+   * [Operating system](#operating-system)
+   * [Home row mods](#home-row-mods)
+      * [Difficulty level](#difficulty-level)
+      * [One-shot shifts](#one-shot-shifts)
+      * [Shift forgiveness](#shift-forgiveness)
+      * [Bilateral combinations](#bilateral-combinations)
+         * [One-handed shortcuts](#one-handed-shortcuts)
+
+   * [Layer access keys](#layer-access-keys)
+   * [Key auto-repeat](#key-auto-repeat)
+   * [Alpha layouts](#alpha-layouts)
+   * [Unicode and Emoji](#unicode-and-emoji)
+      * [OS-native compose](#os-native-compose)
+
 * [Installing](#installing)
-    * [Enabling mouse emulation](#enabling-mouse-emulation)
-        * [Choose a firmware that supports mouse emulation](#choose-a-firmware-that-supports-mouse-emulation)
-    * [Enabling per-key RGB lighting](#enabling-per-key-rgb-lighting)
-    * [Flashing](#flashing)
+   * [Enabling mouse emulation](#enabling-mouse-emulation)
+      * [Choose a firmware that supports mouse emulation](#choose-a-firmware-that-supports-mouse-emulation)
+
+   * [Enabling per-key RGB lighting](#enabling-per-key-rgb-lighting)
+   * [Flashing](#flashing)
+
 * [Upgrading](#upgrading)
 * [Customizing](#customizing)
-    * [Overriding the defaults](#overriding-the-defaults)
-        * [Reordering home row mods](#reordering-home-row-mods)
-        * [Fine-tuning the timing](#fine-tuning-the-timing)
-    * [Compiling from source](#compiling-from-source)
-        * [World and Emoji characters](#world-and-emoji-characters)
-            * [Adding a new World character](#adding-a-new-world-character)
-            * [Shift key for World characters](#shift-key-for-world-characters)
-            * [Modifiers for World characters](#modifiers-for-world-characters)
-            * [Compose for World characters](#compose-for-world-characters)
-            * [Adding a new Emoji character](#adding-a-new-emoji-character)
-            * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
-        * [Editing layer map diagrams](#editing-layer-map-diagrams)
-        * [Rearranging the base layer](#rearranging-the-base-layer)
-            * [Mirroring horizontally](#mirroring-horizontally)
+   * [Overriding the defaults](#overriding-the-defaults)
+      * [Reordering home row mods](#reordering-home-row-mods)
+      * [Fine-tuning the timing](#fine-tuning-the-timing)
+
+   * [Compiling from source](#compiling-from-source)
+      * [World and Emoji characters](#world-and-emoji-characters)
+         * [Adding a new World character](#adding-a-new-world-character)
+         * [Shift key for World characters](#shift-key-for-world-characters)
+         * [Modifiers for World characters](#modifiers-for-world-characters)
+         * [Compose for World characters](#compose-for-world-characters)
+         * [Adding a new Emoji character](#adding-a-new-emoji-character)
+         * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
+
+      * [Editing layer map diagrams](#editing-layer-map-diagrams)
+      * [Rearranging the base layer](#rearranging-the-base-layer)
+         * [Mirroring horizontally](#mirroring-horizontally)
+
 * [License](#license)
 
 <!-- vim-markdown-toc -->
@@ -129,13 +123,14 @@ atop the "Custom Defined Behaviors" text box in your clone of this keymap:
 
 ### Home row mods
 
-Next, let's become familiar with the concept of [home row mods], which are
+Next, let's become familiar with the concept of [home row mods](https://sunaku.github.io/home-row-mods.html), which are
 dual-function keys that *either* send normal keycodes (such as the letter `A`
 or the number `1`) when tapped or modifiers (such as Shift or Ctrl) when held.
 
 ![Concept diagram of *home row mods* on a row-staggered keyboard](https://sunaku.github.io/home-row-mods.png)
 
 The diagram above shows the default "GACS" order of home row mods in this keymap:
+
 - "G" means `LGUI`, which is the Win key in Windows, Cmd in macOS, Super in Linux.
 - "A" means `LALT`, which is the Alt key in Windows and Linux, Option in macOS.
 - "C" means `LCTL`, which is the Control key in Windows, macOS, and Linux alike.
@@ -145,13 +140,14 @@ The diagram above shows the default "GACS" order of home row mods in this keymap
 the home row mods order will be automatically rearranged into "CAGS" because
 macOS shortcuts tend to use the Cmd key like Windows/Linux use the Ctrl key.
 However, you can inhibit the automatic rearrangement by adding this setting:
+
 ```h
 #define MACOS_USE_GACS
 ```
 
 #### Difficulty level
 
-In order to help ease your transition to using [home row mods], this keymap
+In order to help ease your transition to using [home row mods](https://sunaku.github.io/home-row-mods.html), this keymap
 provides a difficulty level setting (like in a video game) that you can set:
 
 ```h
@@ -211,32 +207,31 @@ without any other key having been tapped while the shift was held down.
 For example, suppose you hold a home row shift key and, before pressing
 another key, suddenly decide that you don't want to use shift after all:
 
-1.  If this setting is enabled, the underlying tap behavior is triggered
-    to type a single character when you release that home row shift key.
-
-2.  Otherwise, nothing happens when you release that home row shift key.
+1. If this setting is enabled, the underlying tap behavior is triggered
+   to type a single character when you release that home row shift key.
+2. Otherwise, nothing happens when you release that home row shift key.
 
 This requires the "hold-while-undecided" ZMK feature in a beta firmware:
 please select "v24.08-beta1" or newer from the drop-down menu located at
 Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
 
->CAUTION: This can interfere with mod-click mouse usage where you hold a
-home row shift key and perform mouse actions (move, click, drag & drop):
-when you release that home row shift key, its underlying character would
-be typed, potentially triggering an unexpected action on your selection!
-To prevent the underlying character from being typed, press another key
-(such as a dedicated shift key, a neighboring home row mod key, or even
-a layer access key) before you release the original home row shift key.
+> CAUTION: This can interfere with mod-click mouse usage where you hold a
+> home row shift key and perform mouse actions (move, click, drag & drop):
+> when you release that home row shift key, its underlying character would
+> be typed, potentially triggering an unexpected action on your selection!
+> To prevent the underlying character from being typed, press another key
+> (such as a dedicated shift key, a neighboring home row mod key, or even
+> a layer access key) before you release the original home row shift key.
 
->NOTE: You may potentially encounter "flashing mods" where an application
-or operating system action is triggered by a standalone tap of a shift,
-but this is unlikely as people regularly tap shift without consequence.
+> NOTE: You may potentially encounter "flashing mods" where an application
+> or operating system action is triggered by a standalone tap of a shift,
+> but this is unlikely as people regularly tap shift without consequence.
 
 #### Bilateral combinations
 
 In order to encourage proper touch-typing technique for shortcuts (where one
 hand holds modifiers while the other taps keys to be modified) and for a more
-natural typing experience that forgives [same-hand chords] and lingering holds,
+natural typing experience that forgives [same-hand chords](https://sunaku.github.io/home-row-mods.html#same-hand-chords) and lingering holds,
 this keymap provides bilateral combinations enforcement as an optional feature:
 
 ```h
@@ -259,14 +254,13 @@ In contrast, one-handed shortcuts can be more strenuous as you have to contort
 your hand to hold a modifier _and_ tap modified keys; plus the act of holding a
 modifier limits the hand's range of motion when reaching for keys to be tapped.
 
-[same-hand chords]: https://sunaku.github.io/home-row-mods.html#same-hand-chords
-
 ##### One-handed shortcuts
 
 You can use the Lower layer's _sticky_ home row modifiers to perform one-handed
 shortcuts, bypassing bilateral combinations enforcement, as needed or preferred.
 
 For example, to type the Ctrl+Q shortcut in QWERTY using only the left hand:
+
 1. Hold LT2 (T2 key on left thumb cluster) to access the Lower layer.
 2. Tap the left hand's C3R4 key (home row modifier for _sticky_ Ctrl).
 3. Release LT2 from step 1 to return to your previously active layer.
@@ -278,7 +272,7 @@ all of the per-finger bilateral combinations enforcement layers in the keymap.
 
 ### Layer access keys
 
-This keymap borrows heavily from the legendary [Miryoku] system, featuring:
+This keymap borrows heavily from the legendary [Miryoku](https://github.com/manna-harbour/miryoku) system, featuring:
 
 - Six specialized layers: Cursor, Number, Function, Symbol, Mouse, System
 - Layer access via thumb keys: Backspace, Delete, Escape, Enter, Tab, Space
@@ -297,7 +291,6 @@ Instead, you have two options for engaging auto-repeat on dual-function keys:
 
 1. Use the "Tap then hold" method: first tap (press and release) and then hold
    (press and don't release until the desired amount of repetition is reached).
-
 2. Using repetition access keys: first hold down a Typing layer access key and
    then hold the key you want to repeat for the desired amount of repetition.
 
@@ -311,7 +304,7 @@ by holding the Magic key and tapping the respective number key for that layer.
 
 | Shortcut  | Layer number | Alpha layout |
 | --------- | ------------ | ------------ |
-| Magic+`=` | 0            | [Enthium]    |
+| Magic+`=` | 0            | [Enthium](https://sunaku.github.io/enthium-keyboard-layout.html)    |
 | Magic+`1` | 1            | Dvorak       |
 | Magic+`2` | 2            | Colemak      |
 | Magic+`3` | 3            | QWERTY       |
@@ -335,7 +328,7 @@ by the `rake` command.  However, in order for these macros to take effect, you
 may need to enable support for Unicode hexadecimal character input in your OS:
 
 - (macOS) https://uknowit.uwgb.edu/page.php?id=22623
-    and   https://github.com/ldanet/unicode-hex-input-fix
+   and   https://github.com/ldanet/unicode-hex-input-fix
 - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
 - (Windows) https://github.com/samhocevar/wincompose
 
@@ -359,6 +352,7 @@ See also: the `COMPOSE_KEY_LINUX` setting and the `COMPOSE_SEQ_*` functions.
 ## Installing
 
 Open the [keymap link above](#keymap) and follow these instructions:
+
 1. Log in (account is required)
 2. Clone the keymap to customize and/or build it!
 3. Choose your base layout (place at top as layer number #0) via drag & drop.
@@ -406,28 +400,20 @@ the firmware, turn on the RGB lighting and cycle past the rainbow effect.
 
 ### Flashing
 
-- For the initial flash, see ["Loading new ZMK firmware onto your Glove80"](
-https://docs.moergo.com/glove80-user-guide/customizing-key-layout/#loading-new-zmk-firmware-onto-your-glove80
-) and use the ["Entering bootloader mass storage device mode on power-up"](
-https://docs.moergo.com/glove80-user-guide/customizing-key-layout/#entering-bootloader-mass-storage-device-mode-on-power-up
-) fail-safe on both halves.  Subsequent flashes can target just the left half.
-
+- For the initial flash, see ["Loading new ZMK firmware onto your Glove80"](https://docs.moergo.com/glove80-user-guide/customizing-key-layout/#loading-new-zmk-firmware-onto-your-glove80) and use the ["Entering bootloader mass storage device mode on power-up"](https://docs.moergo.com/glove80-user-guide/customizing-key-layout/#entering-bootloader-mass-storage-device-mode-on-power-up) fail-safe on both halves.  Subsequent flashes can target just the left half.
 - If you're installing a different firmware version compared to what your
-keyboard currently has, then ⚠️ **after flashing both halves** ⚠️ perform a
-["Configuration Factory Reset and re-pair left & right halves procedure"](
-https://docs.moergo.com/glove80-user-guide/troubleshooting/#configuration-factory-reset-and-re-pairing-left-and-right-halves
-) on both halves and then turn RGB effects on, watch them illuminate, and
-finally turn them back off for the newly installed firmware to take effect.
+   keyboard currently has, then ⚠️ **after flashing both halves** ⚠️ perform a
+   ["Configuration Factory Reset and re-pair left & right halves procedure"](https://docs.moergo.com/glove80-user-guide/troubleshooting/#configuration-factory-reset-and-re-pairing-left-and-right-halves) on both halves and then turn RGB effects on, watch them illuminate, and
+   finally turn them back off for the newly installed firmware to take effect.
 
 ## Upgrading
 
 - Copy the ZMK snippet from the "Custom Defined Behaviors" text box in either
-keymap linked above and paste into yours.  The contents of that text box are
-also available in the `*.dtsi` files provided in this Git repository.
-
+   keymap linked above and paste into yours.  The contents of that text box are
+   also available in the `*.dtsi` files provided in this Git repository.
 - You can diff and copy changes between a JSON export of your keymap (via
-"Advanced Settings" > "Enable local config" then go back to "Edit" and click
-"Download") and the `*.json` files provided in this Git repository.
+   "Advanced Settings" > "Enable local config" then go back to "Edit" and click
+   "Download") and the `*.json` files provided in this Git repository.
 
 ## Customizing
 
@@ -488,27 +474,24 @@ For completeness, here are all finger-mod settings available for customization:
 
 #### Fine-tuning the timing
 
-Activate the typing layer, launch the [QMK Configurator's testing tool](
-https://config.qmk.fm/#/test ), and then pretend to use home row mods. Note the
+Activate the typing layer, launch the [QMK Configurator's testing tool](https://config.qmk.fm/#/test), and then pretend to use home row mods. Note the
 timing and duration of keystrokes reported by the tool and then use them to
 adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
 ### Compiling from source
 
->**NOTE:** If you're on Windows, try using [Ubuntu in WSL] for the following.
+> **NOTE:** If you're on Windows, try using [Ubuntu in WSL](https://ubuntu.com/desktop/wsl) for the following.
 
 1. Clone or download a copy of this Git repository (if you haven't already).
 
 2. Install dependencies OR skip this step if you have Docker on your system:
 
-   ```sh
-   add-apt-repository universe && apt update # may be needed if using Ubuntu 
-   apt install rake graphviz graphicsmagick poppler-utils
-   ```
+```sh
+add-apt-repository universe && apt update # may be needed if using Ubuntu 
+apt install rake graphviz graphicsmagick poppler-utils
+```
 
 3. In your copy of this repository, run `rake` OR `./rake` if using Docker.
-
-[Ubuntu in WSL]: https://ubuntu.com/desktop/wsl
 
 #### World and Emoji characters
 
@@ -582,6 +565,7 @@ characters:
 Note that you can directly paste Unicode characters into the file, as illustrated above!
 
 Next, [compile from source](#compiling-from-source) to generate the `&world_sign_copyright` behavior for ZMK:
+
 * The `&world_sign_copyright_regular` behavior will type the regular character: ©
 * The `&world_sign_copyright_shifted` behavior will type the shifted character: ®
 * The `&world_sign_copyright` behavior will choose one of the above based on shift
@@ -677,6 +661,7 @@ transforms:
 ```
 
 Next, [compile from source](#compiling-from-source) to generate the `&world_sign_trademark` behavior for ZMK:
+
 * The `&world_sign_trademark_regular` behavior will type the regular character: ™
 * The `&world_sign_trademark_shifted` behavior will type the shifted character: ℠
 * The `&world_sign_trademark` behavior will choose one of the above based on shift
@@ -733,6 +718,7 @@ world_sign_trademark: world_sign_trademark {
 ```
 
 Also, notice the new `&world_sign_base` behavior that chooses between the other two:
+
 * The `&world_sign_copyright` behavior will type the copyright/registered sign
 * The `&world_sign_trademark` behavior will type the trade/service mark sign
 * The `&world_sign_base` behavior will choose one of the above based on control
@@ -871,6 +857,7 @@ characters:
 Note that you can directly paste Emoji characters into the file, as illustrated above!
 
 Next, [compile from source](#compiling-from-source) to generate the `&emoji_face_unamused` behavior for ZMK:
+
 * The `&emoji_face_unamused_regular` behavior will type the regular character: 😒
 * The `&emoji_face_unamused_shifted` behavior will type the shifted character: 🙄
 * The `&emoji_face_unamused` behavior will choose one of the above based on shift
@@ -922,15 +909,11 @@ The `README/` directory in this repository contains sources and renderings of
 layer map diagrams for all layers in this keymap, as well as a blank template
 for your own customization: for example, if you use a different alpha layout.
 
-To edit a diagram, upload its corresponding JSON file into [the KLE app][KLE]
+To edit a diagram, upload its corresponding JSON file into [the KLE app](https://www.keyboard-layout-editor.com)
 by drag/drop onto the canvas or clicking "Upload JSON" in the "Raw data" tab.
 
-[KLE]: https://www.keyboard-layout-editor.com
-
-To render a layer diagram, use [the "Screenshot node" feature in Firefox][FFS]
+To render a layer diagram, use [the "Screenshot node" feature in Firefox](https://youtu.be/p2pjF_BrE1o)
 on the `#keyboard-bg` element; or use your favorite screenshot capturing tool.
-
-[FFS]: https://youtu.be/p2pjF_BrE1o
 
 To assemble a PDF document with all rendered layer diagrams, run `rake pdf` to
 convert each of them into PDF documents and then stitch them together into one.
@@ -943,11 +926,8 @@ If you rearrange the base layer (say, for a custom or alternative layout) then:
    config" then go back to "Edit" and click "Download") in the Layout Editor.
    ![Enable local config](https://github.com/sunaku/glove80-keymaps/assets/9863/5bf7ff67-94bc-4d8e-9673-271863966dd2)
    ![Download JSON export](https://github.com/sunaku/glove80-keymaps/assets/9863/a7ad7155-e0e6-47e1-ad4c-c89b4d8521b9)
-
 2. Overwrite the `keymap.json` file in this repository with your exported file.
-
 3. Run the `rake` command in this repository.
-
 4. Copy the new `keymap.dtsi` contents back into the "Custom Defined Behaviors"
    text box in the Layout Editor for your keymap.
 
@@ -958,10 +938,10 @@ You don't need to change the per-finger layers (such as "LeftPinky") manually.
 To horizontally mirror a keymap's physical layout in the Glove80 Layout Editor:
 
 1. Activate the "Enable local config" option in the Glove80 Layout Editor's settings panel under the "Experimental Settings" section.
-1. Return to the editor and export your keymap to a JSON file by clicking on the "Download" button.
-2. Paste the contents of the exported JSON file into your Web browser's JavaScript console (found in the "Developer Tools" panel, typically activated by pressing Ctrl+F12) at the location indicated by the comment in the first line of the following code snippet.
-6. Right-click the result, copy to clipboard, save to file, and upload into the Glove80 Layout Editor.
-7. Presto! 🫰 Everything should be mirrored now.
+2. Return to the editor and export your keymap to a JSON file by clicking on the "Download" button.
+3. Paste the contents of the exported JSON file into your Web browser's JavaScript console (found in the "Developer Tools" panel, typically activated by pressing Ctrl+F12) at the location indicated by the comment in the first line of the following code snippet.
+4. Right-click the result, copy to clipboard, save to file, and upload into the Glove80 Layout Editor.
+5. Presto! 🫰 Everything should be mirrored now.
 
 ```javascript
 layout = /* paste contents of exported JSON file here */;
@@ -1015,8 +995,7 @@ mirrored_layout; /* dumps to the console for copying */
 
 ## License
 
-[Spare A Life]: https://sunaku.github.io/vegan-for-life.html
-> Like my work? 👍 Please [spare a life] today as thanks! 🐄🐖🐑🐔🐣🐟✨🙊✌  
+> Like my work? 👍 Please [spare a life](https://sunaku.github.io/vegan-for-life.html) today as thanks! 🐄🐖🐑🐔🐣🐟✨🙊✌  
 > Why? For 💕 ethics, the 🌎 environment, and 💪 health; see link above. 🙇
 
 (the ISC license)
