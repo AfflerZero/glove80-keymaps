@@ -162,7 +162,6 @@
   #define KEY_LH_C2R6 LSFT
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 R
-  #define LAY_LH_T4 LAYER_Symbol
   #define KEY_LH_T5 BACKSPACE
   #define LAY_LH_T5 LAYER_Mouse
   #define KEY_LH_T6 PG_DN
@@ -7327,11 +7326,11 @@ macros {
   };
   UNICODE(emoji_male_sign_macro, /* ♂️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N4 &kp _N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N4 &kp _N2), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N4 &kp _N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N4 &kp _N2), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N4 &kp _N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N4 &kp _N2), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_male_sign: emoji_male_sign {
@@ -7342,11 +7341,11 @@ macros {
   };
   UNICODE(emoji_female_sign_macro, /* ♀️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N4 &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N4 &kp _N0), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N4 &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N4 &kp _N0), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N4 &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N4 &kp _N0), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_female_sign: emoji_female_sign {
@@ -7357,11 +7356,11 @@ macros {
   };
   UNICODE(emoji_right_arrow_macro, /* ➡️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N7 &kp _NA &kp _N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N7 &kp _NA &kp _N1), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N7 &kp _NA &kp _N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N7 &kp _NA &kp _N1), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N7 &kp _NA &kp _N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N7 &kp _NA &kp _N1), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_right_arrow: emoji_right_arrow {
@@ -7372,11 +7371,11 @@ macros {
   };
   UNICODE(emoji_left_arrow_macro, /* ⬅️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _NB &kp _N0 &kp _N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _NB &kp _N0 &kp _N5), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _NB &kp _N0 &kp _N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _NB &kp _N0 &kp _N5), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _NB &kp _N0 &kp _N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _NB &kp _N0 &kp _N5), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_left_arrow: emoji_left_arrow {
@@ -7402,11 +7401,11 @@ macros {
   };
   UNICODE(emoji_cloudy_macro, /* ️☁️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N0 &kp _N1), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N0 &kp _N1), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N0 &kp _N1), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N0 &kp _N1), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N0 &kp _N1), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N0 &kp _N1), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_cloudy: emoji_cloudy {
@@ -7447,11 +7446,11 @@ macros {
   };
   UNICODE(emoji_mostly_sunny_macro, /* ️🌤️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _N2 &kp _N4), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _N2 &kp _N4), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _N2 &kp _N4), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _N2 &kp _N4), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _N2 &kp _N4), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _N2 &kp _N4), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_mostly_sunny: emoji_mostly_sunny {
@@ -7462,11 +7461,11 @@ macros {
   };
   UNICODE(emoji_sunny_macro, /* ☀️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N0 &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N0 &kp _N0), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N0 &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N0 &kp _N0), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N0 &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N0 &kp _N0), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_sunny: emoji_sunny {
@@ -7507,11 +7506,11 @@ macros {
   };
   UNICODE(emoji_cityscape_macro, /* ️🏙️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _ND &kp _N9), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _ND &kp _N9), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _ND &kp _N9), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _ND &kp _N9), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _ND &kp _N9), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _ND &kp _N9), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_cityscape: emoji_cityscape {
@@ -7522,11 +7521,11 @@ macros {
   };
   UNICODE(emoji_cityscape_dusk_macro, /* ️🌇 */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _N0 &kp _N7)
+      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _N0 &kp _N7)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _N0 &kp _N7)
+      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _N0 &kp _N7)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _N0 &kp _N7)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _N0 &kp _N7)
     #endif
   )
   emoji_cityscape_dusk: emoji_cityscape_dusk {
@@ -7942,11 +7941,11 @@ macros {
   };
   UNICODE(emoji_heart_macro, /* ️❤️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_LINUX(&kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_MACOS(&kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_heart: emoji_heart {
@@ -8362,11 +8361,11 @@ macros {
   };
   UNICODE(emoji_warning_macro, /* ⚠️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _NA &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _NA &kp _N0), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _NA &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _NA &kp _N0), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _NA &kp _N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _NA &kp _N0), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_warning: emoji_warning {
@@ -8407,11 +8406,11 @@ macros {
   };
   UNICODE(emoji_astronaut_macro, /* 🧑‍🚀 */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N9 &kp _ND &kp _N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _N2 &kp _N0 &kp _N0 &kp _ND), UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N6 &kp _N8 &kp _N0)
+      UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N9 &kp _ND &kp _N1), UNICODE_SEQ_LINUX(&kp _N2 &kp _N0 &kp _N0 &kp _ND), UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N6 &kp _N8 &kp _N0)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NE &kp _ND &kp _ND &kp _ND &kp _N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _N2 &kp _N0 &kp _N0 &kp _ND), UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _ND &kp _ND &kp _NE &kp _N8 &kp _N0)
+      UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NE &kp _ND &kp _ND &kp _ND &kp _N1), UNICODE_SEQ_MACOS(&kp _N2 &kp _N0 &kp _N0 &kp _ND), UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _ND &kp _ND &kp _NE &kp _N8 &kp _N0)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N9 &kp _ND &kp _N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N0 &kp _N0 &kp _ND), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N6 &kp _N8 &kp _N0)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N9 &kp _ND &kp _N1), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N0 &kp _N0 &kp _ND), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N6 &kp _N8 &kp _N0)
     #endif
   )
   emoji_astronaut: emoji_astronaut {
@@ -8467,11 +8466,11 @@ macros {
   };
   UNICODE(emoji_point_up_macro, /* ☝️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N1 &kp _ND), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N6 &kp _N1 &kp _ND), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N1 &kp _ND), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N6 &kp _N1 &kp _ND), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N1 &kp _ND), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N6 &kp _N1 &kp _ND), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_point_up: emoji_point_up {
@@ -8879,11 +8878,11 @@ macros {
   };
   UNICODE(emoji_theme_strength_lifting_macro, /* 🏋️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _NC &kp _NB), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N1 &kp _NF &kp _N3 &kp _NC &kp _NB), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _NC &kp _NB), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _ND &kp _N8 &kp _N3 &kp _NC &kp _ND &kp _NF &kp _NC &kp _NB), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _NC &kp _NB), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _NF &kp _N3 &kp _NC &kp _NB), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_theme_strength_lifting: emoji_theme_strength_lifting {
@@ -8942,11 +8941,11 @@ macros {
   };
   UNICODE(emoji_theme_love_heart_macro, /* ❤️ */
     #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N7 &kp _N6 &kp _N4), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_LINUX(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N7 &kp _N6 &kp _N4), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_MACOS(&kp _NF &kp _NE &kp _N0 &kp _NF)
     #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N7 &kp _N6 &kp _N4), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N7 &kp _N6 &kp _N4), UNICODE_SEQ_WINDOWS(&kp _N0 &kp _NF &kp _NE &kp _N0 &kp _NF)
     #endif
   )
   emoji_theme_love_heart: emoji_theme_love_heart {

@@ -1665,7 +1665,9 @@ macros {
           format_keystrokes_for_unicode(keystrokes, os)
         end
 
-        if sequence.length > 1
+        # Some build environments reject this extra macro token in bindings.
+        # Omitting it keeps Unicode sequences parseable across firmware forks.
+        if false && sequence.length > 1
           sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
         end
   %>
