@@ -709,7 +709,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "RSFT"
+            "value": "RSHFT"
           }
         ]
       },
@@ -13046,12 +13046,7 @@
         "value": "&bt_3"
       },
       {
-        "value": "&tog",
-        "params": [
-          {
-            "value": 25
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&none"
