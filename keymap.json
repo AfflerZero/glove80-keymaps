@@ -706,7 +706,12 @@
         }
       },
       {
-        "value": "&key_repeat"
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&key_repeat"
+          }
+        ]
       },
       {
         "value": "&kp",
