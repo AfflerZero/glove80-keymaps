@@ -483,14 +483,14 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT"
+            "value": "&thumb LAYER_Lower DELETE"
           }
         ],
         "decoration": {
-          "label": "Ins",
+          "label": "Del",
           "icon": "fa-angle-double-down",
           "background": "#ffccbcff",
-          "description": "Hold for Lower layer. Tap for Insert."
+          "description": "Hold for Lower layer. Tap for Delete."
         }
       },
       {
@@ -516,14 +516,14 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower DELETE"
+            "value": "&thumb LAYER_Lower INSERT"
           }
         ],
         "decoration": {
-          "label": "Del",
+          "label": "Ins",
           "icon": "fa-angle-double-down",
           "background": "#ffccbcff",
-          "description": "Hold for Lower layer. Tap for Delete."
+          "description": "Hold for Lower layer. Tap for Insert."
         }
       },
       {
@@ -634,28 +634,28 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor SPACE"
+            "value": "&space LAYER_Symbol R"
           }
         ],
         "decoration": {
-          "label": "Space",
-          "icon": "tb-activity",
+          "label": "R",
+          "icon": "tb-icons",
           "background": "#d1c4e9ff",
-          "description": "Hold for Cursor layer. Tap for Spacebar."
+          "description": "Hold for Symbol layer. Tap for R."
         }
       },
       {
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number TAB"
+            "value": "&thumb LAYER_Mouse BACKSPACE"
           }
         ],
         "decoration": {
-          "label": "Tab",
-          "icon": "tb-numbers",
+          "label": "Bksp",
+          "icon": "tb-spiral",
           "background": "#d1c4e9ff",
-          "description": "Hold for Number layer. Tap for Tab."
+          "description": "Hold for Mouse layer. Tap for Backspace."
         }
       },
       {
@@ -681,37 +681,32 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse BACKSPACE"
+            "value": "&thumb LAYER_Number TAB"
           }
         ],
         "decoration": {
-          "label": "Bksp",
-          "icon": "tb-spiral",
+          "label": "Tab",
+          "icon": "tb-numbers",
           "background": "#d1c4e9ff",
-          "description": "Hold for Mouse layer. Tap for Backspace."
+          "description": "Hold for Number layer. Tap for Tab."
         }
       },
       {
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol R"
+            "value": "&thumb LAYER_Cursor SPACE"
           }
         ],
         "decoration": {
-          "label": "R",
-          "icon": "tb-icons",
+          "label": "Space",
+          "icon": "tb-activity",
           "background": "#d1c4e9ff",
-          "description": "Hold for Symbol layer. Tap for R."
+          "description": "Hold for Cursor layer. Tap for Spacebar."
         }
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RSHFT"
-          }
-        ]
+        "value": "&key_repeat"
       },
       {
         "value": "&kp",
