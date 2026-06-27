@@ -106,7 +106,7 @@
 //
 <%
   require 'json'
-  keymap = JSON.load_file("keymap.json")
+  keymap = JSON.parse(File.read("keymap.json"))
 
   def resolve_nested_keystrokes(key)
     if key
@@ -1551,9 +1551,9 @@ macros {
     end
 
     def format_keystrokes_for_unicode(keystrokes, os)
-      send("format_keystrokes_for_#{os}_unicode", keystrokes)
+      formatted = send("format_keystrokes_for_#{os}_unicode", keystrokes)
       # allow customization of keycodes for hexadecimal digits
-      .gsub(/(?<=&kp )(?:([A-F])|N(\d))\b/, '_N\1\2')
+      formatted.gsub(/(?<=&kp )(?:([A-F])|N(\d))\b/, '_N\1\2')
     rescue NameError
       raise NotImplementedError, "#{os} is not yet supported"
     end
@@ -1587,8 +1587,9 @@ macros {
     end
 
     def hexcodepoint_from_character(character, os)
-      case character.codepoints
-      in [codepoint]
+      codepoints = character.codepoints
+      if codepoints.length == 1
+        codepoint = codepoints.first
         # macOS expects two UTF-16 instead UTF-32
         # https://apple.stackexchange.com/a/183056
         if os == :macos && codepoint >= 0x10000
