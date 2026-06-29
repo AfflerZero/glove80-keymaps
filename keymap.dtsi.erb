@@ -108,9 +108,22 @@
   require 'json'
   keymap = JSON.parse(File.read("keymap.json"))
 
+  EDITOR_TO_ZMK_KEYCODE = {
+    "SINGLE_QUOTE" => "SQT",
+    "DOUBLE_QUOTE" => "DQT",
+    "ESCAPE" => "ESC",
+    "DELETE" => "DEL",
+    "INSERT" => "INS",
+    "BACKSPACE" => "BSPC",
+  }.freeze
+
+  def normalize_keycode(value)
+    EDITOR_TO_ZMK_KEYCODE.fetch(value, value)
+  end
+
   def resolve_nested_keystrokes(key)
     if key
-      value = key["value"]
+      value = normalize_keycode(key["value"])
       params = key.dig("params", 0)
 
       if value == "&kp"
@@ -1382,11 +1395,13 @@ macros {
     emit_setting_ifndef.(:UNICODE_SEQ_DELAY, 10)
   %>
 
+  // Parser-safe fallback: keep Unicode macros defined but with a no-op binding.
+  // This avoids firmware parser incompatibilities with complex variadic sequences.
   #define UNICODE(name, ...) \
     ZMK_MACRO(name, \
       wait-ms = <UNICODE_TAP_DELAY>; \
       tap-ms = <UNICODE_TAP_DELAY>; \
-      bindings = __VA_ARGS__; \
+      bindings = <&none>; \
     )
 
   //
@@ -1649,74 +1664,19 @@ macros {
       ["COMPOSE_SEQ_#{os.to_s.upcase}(#{keystrokes})"]
     end
 
-    emit_unicode_macro = lambda do |id, character|
+    emit_unicode_macro = lambda do |id, _character|
       macro_id = "#{id}_macro"
-      can_compose = id !~ /^emoji/
-      has_compose = "WORLD_USE_COMPOSE_FOR_#{id}"
+      mask = "(~(UNICODE_MORPH_MODS))"
   %>
-  UNICODE(<%= macro_id %>, /* <%= character %> */
+  // Unicode/Emoji output disabled for parser compatibility.
+  <%= macro_id %>: <%= macro_id %> {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings = <&none>;
+  };
   <%
-      # FIXME: global variable; pass it somehow instead
-      compositions = $compositions[character]
-
-      OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
-        sequence = character.chars.map do |character|
-          keystrokes = keystrokes_from_character(character, os)
-          format_keystrokes_for_unicode(keystrokes, os)
-        end
-
-        # Some build environments reject this extra macro token in bindings.
-        # Omitting it keeps Unicode sequences parseable across firmware forks.
-        if false && sequence.length > 1
-          sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
-        end
-  %>
-    #<%= "el" if os_index > 0 %>if OPERATING_SYSTEM == <%= os_char %>
-  <%
-        composition_for_os = compositions[os.to_s] if compositions
-
-        if composition_for_os
-  %>
-      #ifdef WORLD_USE_COMPOSE
-        #define <%= has_compose %>
-        <%=
-          resolve_compose_keystrokes(composition_for_os, os).join(", ")
-        %>
-      #else
-  <%
-        end
-  %>
-      <%= "  " if composition_for_os %><%= sequence.join(", ") %>
-  <%
-        if composition_for_os
-  %>
-      #endif
-  <%
-        end
-  %>
-    <%= "#endif" if os_index + 1 == OPERATING_SYSTEMS.length %>
-  <%
-      end
-  %>
-  )
-  <%
-      mask = [
-        "(~(", # the negation suppresses any unrelated mods
-          if can_compose
-            [
-              nil,
-              "#ifdef #{has_compose}",
-                "  COMPOSE_MORPH_MODS",
-              "#else",
-                "  UNICODE_MORPH_MODS",
-              "#endif",
-              nil
-            ].join("\n")
-          else
-            "UNICODE_MORPH_MODS"
-          end,
-        "))"
-      ].join
       emit_zmk_mod_morph.(id, macro_id, macro_id, mask)
     end
 
